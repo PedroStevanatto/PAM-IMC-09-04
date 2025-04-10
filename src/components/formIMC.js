@@ -1,6 +1,8 @@
 import { View, TextInput, Button, StyleSheet} from 'react-native';
 import Result from './Result';
 import { useState } from 'react';
+import Classificar from './Classification';
+import Ideal from './IdealWeight';
 
 const FormIMC = () => {
     const[peso, setPeso] = useState('');
@@ -34,7 +36,13 @@ const FormIMC = () => {
             />
             <Button title="Calcular IMC" onPress={calcularIMC} />
             
-            {imc && <Result imc={imc} />}
+            {imc && (
+                <>
+                    <Result imc={imc}/>
+                    <Classificar imc={imc}/>
+                    <Ideal altura={altura}/>
+                </>
+            )}
         </View>
     );
 };
