@@ -1,14 +1,17 @@
 import { Text, StyleSheet } from 'react-native';
 
+{/*componente que mostra o titulo da calculadora*/}
 const Title = () => {
     return (
-        <Text style={StyleSheet.title}>Calculadora de IMC</Text>
+        <Text style={styles.title}>Calculadora de IMC</Text>
     );
 };
 
+{/*configuracoes para deixar mais agradavel visualmente*/}
 const styles = StyleSheet.create({
     title: {
-        fontSize: 32,
+        color: '#ECECEC',
+        fontSize: 27,
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 24,
